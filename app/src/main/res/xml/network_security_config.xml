@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Izinkan HTTP untuk server dosen -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">104.248.153.158</domain>
+        <domain includeSubdomains="true">localhost</domain>
+    </domain-config>
+
+    <!-- Untuk development, bisa enable cleartext untuk semua domain -->
+    <!-- HAPUS INI DI PRODUCTION! -->
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>
